@@ -26,6 +26,7 @@ class InitiateApp(object):
 
   def on_reconnect(self):
     print('reconnect')
+    self.socketIO.emit('join', 'room2')
 
   def on_message(self, *args):
     print('on chat message', args)
